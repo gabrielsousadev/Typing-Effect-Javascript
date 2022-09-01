@@ -11,7 +11,7 @@ body
 {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(#536976, #292E49);
-    color: #fff;
+    color: #f1f1f1;
 }
 
 .container
@@ -42,7 +42,7 @@ body
 {
     display: inline-block;
     width: 3px;
-    background-color: #ccc;
+    background-color: #f1f1f1;
     margin-left: 0.1rem;
     animation: blink 1s infinite;
 }
@@ -51,12 +51,12 @@ body
 {
     0%
     {
-        background-color: #ccc;
+        background-color: #f1f1f1;
     }
 
     49%
     {
-        background-color: #ccc;
+        background-color: #f1f1f1;
     }
 
     50%
@@ -71,6 +71,6 @@ body
 
     100%
     {
-        background-color: #ccc;
+        background-color: #f1f1f1;
     }
 }
