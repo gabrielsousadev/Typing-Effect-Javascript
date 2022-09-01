@@ -1,7 +1,6 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["hard", "fun", "a journey", "cool"];
+const textArray = ["programmer", "full stack", "software engineer", "brother"];
 const typingDelay = 200, erasingDelay = 100, newTextDelay = 2000;
 let textArrayIndex = 0, charIndex = 0;
 
@@ -9,11 +8,7 @@ function type()
 {
     if (charIndex < textArray[textArrayIndex].length) 
     {
-        if (!cursorSpan.classList.contains("typing")) 
-        {
-            cursorSpan.classList.add("typing");
-        }
-
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
         typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
         setTimeout(type, typingDelay);
@@ -30,11 +25,7 @@ function erase()
 {
     if (charIndex > 0) 
     {
-        if (!cursorSpan.classList.contains("typing")) 
-        {
-            cursorSpan.classList.add("typing");
-        }
-
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
         typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
         charIndex--;
         setTimeout(erase, erasingDelay);
@@ -55,8 +46,5 @@ function erase()
 
 document.addEventListener("DOMContentLoaded", function name() 
 {
-    if (textArray.length) 
-    {
-        setTimeout(type, newTextDelay + 250);   
-    }
+    if (textArray.length) setTimeout(type, newTextDelay + 250); 
 });
