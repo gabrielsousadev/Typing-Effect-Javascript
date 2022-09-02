@@ -1,7 +1,7 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 const textArray = ["programmer", "full stack", "software engineer", "brother"]; //Words list
-const typingDelay = 200, erasingDelay = 100, newTextDelay = 2000;
+const typingDelay = 200, deleteDelay = 100, newTextDelay = 2000;
 let textArrayIndex = 0, charIndex = 0;
 
 function writeText()
@@ -28,7 +28,7 @@ function deleteText()
         if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
         typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(deleteText, erasingDelay);
+        setTimeout(deleteText, deleteDelay);
     }
 
     else
